@@ -1,0 +1,10 @@
+bin
+obj
+.dockerignore
+.env
+.env.example
+.docker-compose.yml
+Dockerfile
+.idea
+.env.titan
+.env.screepsplus

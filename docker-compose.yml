@@ -1,0 +1,30 @@
+version: '3'
+services:
+  graphite:
+    image: graphiteapp/graphite-statsd
+    volumes:
+      - graphite:/opt/graphite/storage/whisper
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "9120:3000"
+    env_file: .env
+    links:
+      - graphite
+    volumes:
+      - grafana:/var/lib/grafana
+  agent1:
+    build: .
+    env_file: .env.titan
+    links:
+      - graphite
+  agent2:
+    build: .
+    env_file: .env.screepsplus
+    links:
+      - graphite
+
+volumes:
+  graphite: {}
+  grafana: {}
