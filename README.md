@@ -11,6 +11,9 @@ Made for a very easy usage.
 4. Update this file to connect to your server (it's already setup for screepsplus) and update the credentials
 5. Start the containers with `docker-compose up`
 6. Connect to grafana on localhost:9120 with the username admin and the password you have setup.
+7. Add a new Datasource named graphite with the url `http://graphite`
+
+![Graphite](https://i.imgur.com/0G4qdC7.png)
 
 Now you can put any data you want in your `Memory.stats` object and it will be fed to grafana.
 
@@ -30,3 +33,5 @@ StatsManager.runForAllRooms();
 https://raw.githubusercontent.com/devnixs/screeps-stats-grafana/master/scripts/grafana-dashboard.json
 
 2. Simply import it as a new dashboard in grafana.
+
+![Import](https://i.imgur.com/qDQs3ew.png)
