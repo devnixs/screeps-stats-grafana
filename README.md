@@ -12,5 +12,21 @@ Made for a very easy usage.
 5. Start the containers with `docker-compose up`
 6. Connect to grafana on localhost:9120 with the username admin and the password you have setup.
 
-Now you can put any data you want in your Memory.stats object and it will be fed to grafana.
+Now you can put any data you want in your `Memory.stats` object and it will be fed to grafana.
 
+## Premade Screeps Script
+
+1. You can use this premade script to automatically create your `Memory.stats` object with some useful information
+https://raw.githubusercontent.com/devnixs/screeps-stats-grafana/master/scripts/stats-manager.ts
+2. Use it with 
+```typescript
+import {StatsManager} from 'stats-manager.ts'
+StatsManager.runForAllRooms();
+```
+
+## Premade Grafana Dashboard
+
+1. You can use this premade grafana dashboard to display all the important metrics
+https://raw.githubusercontent.com/devnixs/screeps-stats-grafana/master/scripts/grafana-dashboard.json
+
+2. Simply import it as a new dashboard in grafana.
