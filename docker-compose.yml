@@ -16,14 +16,15 @@ services:
       - grafana:/var/lib/grafana
   agent1:
     build: .
-    env_file: .env.titan
-    links:
-      - graphite
-  agent2:
-    build: .
     env_file: .env.screepsplus
     links:
       - graphite
+#  Add other servers by adding other agents      
+#  agent2:
+#    build: .
+#    env_file: .env.titan
+#    links:
+#      - graphite
 
 volumes:
   graphite: {}
